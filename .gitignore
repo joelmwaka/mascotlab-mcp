@@ -1,1 +1,4 @@
 .DS_Store
+
+# Installed dependencies of the stdio bridge.
+node_modules/
