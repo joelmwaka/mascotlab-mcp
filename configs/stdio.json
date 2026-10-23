@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mascotlab": {
+      "command": "npx",
+      "args": ["-y", "mascotlab-mcp"]
+    }
+  }
+}

@@ -64,6 +64,25 @@ Clients that register themselves need nothing else.
 
 ---
 
+## Clients without remote support
+
+Some clients can only start a local process and talk to it over stdio. For
+those, this repository is also a small package that runs the hosted server
+through a bridge: it starts locally, carries the OAuth sign-in through a
+browser window the first time, and forwards everything else to
+`https://mascotlab.io/mcp`. Nothing is generated on your machine.
+
+Save [`configs/stdio.json`](configs/stdio.json) where your client reads its
+MCP configuration, or run it directly:
+
+```bash
+npx -y mascotlab-mcp
+```
+
+Extra arguments are passed to the bridge, so `--device-code` works on a
+machine without a browser. If your client supports remote servers, connect
+to the endpoint directly instead; it is one hop shorter.
+
 ## Asking for artwork
 
 Ask in plain language. The agent picks the tools; you do not need to name
@@ -118,7 +137,8 @@ that held the connection open for two minutes would time out in most clients.
 - Artwork you generate is yours, including commercially. Exports are free and
   unwatermarked.
 - Nothing is charged for a generation that fails.
-- Animations need an active subscription; images run on credits.
+- Credits are bought in packs and never expire. Animating needs a purchase
+  first; the welcome credits cover images.
 - Everything also appears on your board at
   [mascotlab.io](https://mascotlab.io).
 
@@ -132,5 +152,5 @@ that held the connection open for two minutes would time out in most clients.
 
 ## License
 
-The contents of this repository are MIT licensed. It holds configuration and
-documentation, not the service itself.
+The contents of this repository are MIT licensed. It holds the stdio bridge,
+client configuration and documentation; the service itself is hosted.

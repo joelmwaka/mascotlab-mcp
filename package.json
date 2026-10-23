@@ -1,0 +1,35 @@
+{
+  "name": "mascotlab-mcp",
+  "version": "1.0.0",
+  "description": "Generate your app's mascot, then props, poses and animations that stay on-model. Runs the hosted MascotLab MCP server over stdio for clients without remote support.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mascotlab-mcp": "bin/mascotlab-mcp.js"
+  },
+  "files": [
+    "bin",
+    "configs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joelmwaka/mascotlab-mcp.git"
+  },
+  "homepage": "https://mascotlab.io",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mascot",
+    "image-generation",
+    "claude-code",
+    "cursor"
+  ],
+  "dependencies": {
+    "mcp-remote": "^0.15.2"
+  }
+}
